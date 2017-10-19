@@ -47,23 +47,23 @@ def get_query_results(query):
 
 def print_articles_results(query_results):
     """Prints the most popular three articles of all time"""
-    print (query_results[1])
+    print(query_results[1])
     for i, line in enumerate(query_results[0]):
         print("\t", i+1, "-", line[0], "\t - ", str(line[1]), "views")
 
 
 def print_authors_results(query_results):
     """Print the most popular article authors of all time"""
-    print (query_results[1])
+    print(query_results[1])
     for i, line in enumerate(query_results[0]):
         print("\t", i+1, "-", line[0], "\t - ", str(line[1]), "views")
 
 
 def print_error_results(query_results):
     """Prints the days on which more than 1% of requests lead to errors"""
-    print (query_results[1])
+    print(query_results[1])
     for i in query_results[0]:
-        print ("\t", "*", "-", i[0], "-", str(round(i[3], 2)) + "% errors")
+        print("\t", "*", "-", i[0], "-", str(round(i[3], 2)) + "% errors")
 
 
 if __name__ == '__main__':
